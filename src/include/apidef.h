@@ -10,12 +10,6 @@
 #define TMO_POL (0)    // タイムアウト時間 0
 #define TMO_FEVR (-1)  // 無限待ち
 
-/* 待ち関連属性 */
-#define TA_TFIFO 0x00000000  // 待ちタスクをFIFO順で管理
-#define TA_TPRI 0x00000001   // 待ちタスクを優先度順で管理
-#define TA_FIRST 0x00000000  // 待ち行列先頭のタスクを優先
-#define TA_CNT 0x00000002    // 要求数の少ないタスクを優先
-
 /*タスク生成情報 */
 typedef struct {
   ATR tskatr;    // タスク属性
@@ -80,5 +74,22 @@ typedef struct t_csem {
 ID tk_cre_sem(const T_CSEM *pk_csem);
 ER tk_sig_sem(ID semid, INT cnt);
 ER tk_wai_sem(ID semid, INT cnt, TMO tmout);
+
+/* デバイス管理API */
+ID tk_opn_dev(const UB *devnm, UINT omode);
+ER tk_srea_dev(ID dd, W start, void *buf, SZ size, SZ *asize);
+ER tk_swri_dev(ID dd, W start, const void *buf, SZ size, SZ *asize);
+
+#define TD_READ 0x0001U    // 読込み専用
+#define TD_WRITE 0x0002U   // 書込み専用
+#define TD_UPDATE 0x0003U  // 読込みおよび書込み
+
+/* I2Cデバイスドライバ定義 */
+#define TDN_I2C_EXEC (-100)  // 属性データ(拡張アクセス)
+typedef struct {
+  UW sadr;   // スレーブアドレス
+  UB *sbuf;  // 送信バッファ
+  UB *rbuf;  // 受信バッファ
+} T_I2C_EXEC;
 
 #endif /* APIDEF_H */

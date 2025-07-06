@@ -39,10 +39,17 @@ ASMM_SOURCES = \
 	kernel/dispatch.S
 
 C_SOURCES = \
+	application/gsns.c \
+	application/lcd.c \
+	application/lsns.c \
 	application/usermain.c \
 	boot/boot2.c \
 	boot/reset_hdr.c \
 	boot/vector_tbl.c \
+	device/adc/adc_rp2040.c \
+	device/devmgr/dev_tbl.c \
+	device/devmgr/device.c \
+	device/i2c/i2c_rp2040.c \
 	kernel/context.c \
 	kernel/eventflag.c \
 	kernel/inittsk.c \

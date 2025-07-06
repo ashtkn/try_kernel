@@ -8,7 +8,6 @@
 #include <syslib.h>
 #include <typedef.h>
 
-extern void dispatch_entry(void); /* ディスパッチャ */
 /* デフォルトハンドラ */
 void Default_Handler(void) { while (1); }
 
