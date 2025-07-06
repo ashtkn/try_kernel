@@ -44,8 +44,10 @@ C_SOURCES = \
 	boot/reset_hdr.c \
 	boot/vector_tbl.c \
 	kernel/context.c \
+	kernel/eventflag.c \
 	kernel/inittsk.c \
 	kernel/scheduler.c \
+	kernel/semaphore.c \
 	kernel/syslib.c \
 	kernel/systimer.c \
 	kernel/task_mange.c \
