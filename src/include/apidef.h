@@ -1,4 +1,4 @@
-﻿#ifndef APIDEF_H
+#ifndef APIDEF_H
 #define APIDEF_H
 /*
  *** Try Kernel
