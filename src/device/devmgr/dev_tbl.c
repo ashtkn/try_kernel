@@ -1,7 +1,7 @@
 #include <trykernel.h>
 
-#include "..\adc\dev_adc.h"
-#include "..\i2c\dev_i2c.h"
+#include "../adc/dev_adc.h"
+#include "../i2c/dev_i2c.h"
 #include "device.h"
 
 /* デバイス登録テーブル*/

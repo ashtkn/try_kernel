@@ -4,7 +4,8 @@
 
 ## 開発環境
 
-Windows環境で試しています。
+## Windows
+
 以下のソフトウェアをダウンロードしてパスを通してください。
 
 - [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
@@ -18,6 +19,15 @@ Windows環境で試しています。
 
 - `GCC_PATH`: `arm-none-eabi-gcc`がある`bin`ディレクトリへのフルパス
 - `PICO_SDK_PATH`: [pico-sdk](https://github.com/raspberrypi/pico-sdk)のプロジェクトルートディレクトリへのフルパス
+
+## Mac
+
+以下のソフトウェアをダウンロードしてパスを通してください。
+
+- [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
+
+また，`Make`，`OpenOCD`，`LLVM`をHomebrew等でインストールしてください。
+Windowsと同じく`GCC_PATH`，`PICO_SDK_PATH`環境変数を設定してください。
 
 ## デバッガ
 
