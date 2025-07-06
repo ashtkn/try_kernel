@@ -39,12 +39,16 @@ ASMM_SOURCES = \
 	kernel/dispatch.S
 
 C_SOURCES = \
-	application/main.c \
+	application/usermain.c \
 	boot/boot2.c \
 	boot/reset_hdr.c \
 	boot/vector_tbl.c \
 	kernel/context.c \
-	kernel/syslib.c
+	kernel/inittsk.c \
+	kernel/scheduler.c \
+	kernel/syslib.c \
+	kernel/task_mange.c \
+	kernel/task_queue.c
 
 #######################################
 # header files
