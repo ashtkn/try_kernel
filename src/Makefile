@@ -47,8 +47,10 @@ C_SOURCES = \
 	kernel/inittsk.c \
 	kernel/scheduler.c \
 	kernel/syslib.c \
+	kernel/systimer.c \
 	kernel/task_mange.c \
-	kernel/task_queue.c
+	kernel/task_queue.c \
+	kernel/task_sync.c
 
 #######################################
 # header files

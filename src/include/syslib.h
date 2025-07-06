@@ -1,7 +1,7 @@
 #ifndef SYSLIB_H
 #define SYSLIB_H
 
-#include "typedef.h"
+#include <typedef.h>
 
 /*
  *** Try Kernel
