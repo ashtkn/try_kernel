@@ -34,13 +34,16 @@ endif
 # source files
 #######################################
 ASM_SOURCES =
-ASMM_SOURCES =
+
+ASMM_SOURCES = \
+	kernel/dispatch.S
 
 C_SOURCES = \
 	application/main.c \
 	boot/boot2.c \
 	boot/reset_hdr.c \
 	boot/vector_tbl.c \
+	kernel/context.c \
 	kernel/syslib.c
 
 #######################################
