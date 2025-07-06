@@ -4,30 +4,24 @@
 
 ## 開発環境
 
-## Windows
+### 共通
+
+[Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)をダウンロードし，`bin`ディレクトリへの絶対パスを`GCC_PATH`環境変数として設定してください。
+また，[Raspberry Pi Pico SDK](https://github.com/raspberrypi/pico-sdk)をダウンロードし，`pico-sdk`ディレクトリへの絶対パスを`PICO_SDK_PATH`環境変数として設定してください。
+
+### Windows
 
 以下のソフトウェアをダウンロードしてパスを通してください。
 
-- [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
 - [Make for Windows](https://gnuwin32.sourceforge.net/packages/make.htm)
 - [LibIntl for Windows](https://gnuwin32.sourceforge.net/packages/libintl.htm)
 - [LibIconv for Windows](https://gnuwin32.sourceforge.net/packages/libiconv.htm)
 - [OpenOCD](https://github.com/ciniml/debug-tools-builder/tree/v1.3)
 - [LLVM](https://github.com/llvm/llvm-project/releases)
 
-以下の環境変数を設定してください。
+### Mac / Linux
 
-- `GCC_PATH`: `arm-none-eabi-gcc`がある`bin`ディレクトリへのフルパス
-- `PICO_SDK_PATH`: [pico-sdk](https://github.com/raspberrypi/pico-sdk)のプロジェクトルートディレクトリへのフルパス
-
-## Mac
-
-以下のソフトウェアをダウンロードしてパスを通してください。
-
-- [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
-
-また，`Make`，`OpenOCD`，`LLVM`をHomebrew等でインストールしてください。
-Windowsと同じく`GCC_PATH`，`PICO_SDK_PATH`環境変数を設定してください。
+`Make`，`OpenOCD`，`LLVM`をインストールしてください。
 
 ## デバッガ
 
