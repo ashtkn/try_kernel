@@ -40,7 +40,8 @@ C_SOURCES = \
 	application/main.c \
 	boot/boot2.c \
 	boot/reset_hdr.c \
-	boot/vector_tbl.c
+	boot/vector_tbl.c \
+	kernel/syslib.c
 
 #######################################
 # header files

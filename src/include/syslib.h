@@ -9,22 +9,22 @@
  */
 
 /* 32bitレジスタからの入力 */
-static inline UW in_w(UW adr) { return *(_UW *)adr; }
+static inline UW in_w(UW adr) { return *(_UW*)adr; }
 
 /* 32bitレジスタへの出力 */
-static inline void out_w(UW adr, UW data) { *(_UW *)adr = data; }
+static inline void out_w(UW adr, UW data) { *(_UW*)adr = data; }
 
 /* 32bitレジスタへの出力(ビットクリア) */
 #define OP_CLR 0x3000
-static inline void clr_w(UW adr, UW data) { *(_UW *)(adr + OP_CLR) = data; }
+static inline void clr_w(UW adr, UW data) { *(_UW*)(adr + OP_CLR) = data; }
 
 /* 32bitレジスタへの出力(ビットセット) */
 #define OP_SET 0x2000
-static inline void set_w(UW adr, UW data) { *(_UW *)(adr + OP_SET) = data; }
+static inline void set_w(UW adr, UW data) { *(_UW*)(adr + OP_SET) = data; }
 
 /* 32bitレジスタへの出力(ビット排他的論理和) */
 #define OP_XOR 0x1000
-static inline void xset_w(UW adr, UW data) { *(_UW *)(adr + OP_XOR) = data; }
+static inline void xset_w(UW adr, UW data) { *(_UW*)(adr + OP_XOR) = data; }
 
 /* PRIMASKレジスタ制御インライン関数 */
 static inline void set_primask(INT pm) {
@@ -43,4 +43,8 @@ static inline UW get_primask(void) {
 /* 割込み許可マクロ */
 #define EI(intsts) (set_primask(intsts))
 
-#endif /* STYLIB_H */
+/* デバッグ用シリアル通信 */
+void tm_com_init(void);
+UINT tm_putstring(char* str);
+
+#endif /* SYSLIB_H */
