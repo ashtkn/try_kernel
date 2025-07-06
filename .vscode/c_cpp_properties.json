@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Arm GNU Toolchain",
+            "includePath": [
+                "${workspaceFolder}/src/**",
+                "${env:GCC_PATH}/../**"
+            ],
+            "defines": [],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}

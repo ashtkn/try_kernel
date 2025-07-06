@@ -1,0 +1,10 @@
+{
+    "[c]": {
+        "editor.formatOnSave": true
+    },
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c"
+    },
+    "C_Cpp.default.compilerPath": "$(env:GCC_PATH)/arm-none-eabi-gcc"
+}
